@@ -1,0 +1,38 @@
+body {
+    background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+    font-size: 65px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+
+}
+
+
+button {
+    padding: 19px 30px;
+    border-radius: 15px;
+    border: none;
+    background: blue;
+    color: white;
+}
+

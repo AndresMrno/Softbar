@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Softbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="vistaCliente.css">
+    <script src="editarPerfil.js"></script>
+  </head>
+  <body>
+    
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning mb-0" id="Menu">
+            <div class="container-fluid">
+              <a class="navbar-brand fs-2 fw-bold"  href="#">Softbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#servicios">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#equipo">Acerca de nosotros</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contactenos </a>
+                  </li>
+                  
+                </ul>
+    
+                    <button class="btn btn-primary">Cliente</button>
+                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Editar Perfil</button>
+                                           
+                            <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                             <div class="modal-dialog">
+                             <div class="modal-content">
+                             <div class="modal-header bg-primary">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <form>
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                    <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre">
+                                  </div>
+    
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                    <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="apellido">
+                                  </div>
+    
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                    <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="direccion">
+                                  </div>
+    
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                    <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono">
+                                  </div>
+
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Correo:</label>
+                                    <input type="email" class="form-control" style="background-color: rgb(185, 185, 185);" id="correo">
+                                  </div>
+    
+                                 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary" onclick="editar()">Editar perfil</button>
+                          </div>
+                        </div>
+                      </div>
+                         </div>
+                        </form>
+              </div>
+              <button class="btn btn-primary"><a href="inicioSesion.html" style="text-decoration:none;" class="text-light fs-6">Cerrar sesión</a></button>
+            </div>
+            
+          </nav>
+
+
+          <div class="logo ml-5 align-items-center">
+            <img src="img/LOGO.png" alt="logo">
+        </div>
+
+        <h1 class="text-center"><a href="servicios"></a>SERVICIOS</h1>
+
+    
+            <div class="container-flex  mb-2">
+
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 20rem">
+                            <div class="card-body" id="carta">
+                              <h5 class="card-title">Ventas</h5>
+                              <h6 class="card-subtitle mb-2 text-dark">Servicio de ventas</h6>
+                              <p class="card-text">
+                                Puede comprar sus productos en tipo catalogo, si desea comprar haga click en Ver mas.
+                              </p>
+                              <a href="moduloVentas.html" class="card-link">Ver más</a>
+
+                            </div>
+                          </div>
+
+                    </div>
+
+
+                    
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 20rem">
+                            <div class="card-body" id="carta1">
+                              <h5 class="card-title">Domicilio</h5>
+                              <h6 class="card-subtitle mb-2 text-dark">Servicio a domicilio</h6>
+                              <p class="card-text-dark">
+                                Si desea que el producto llegue a la puerta de su casa a la hora que desea, haga click en ver más.
+                              </p>
+                              <a href="moduloDomicilio.html" class="card-link">Ver más</a>
+
+                            </div>
+                          </div>
+
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 20rem">
+                            <div class="card-body" id="carta2">
+                              <h5 class="card-title">Reserva</h5>
+                              <h6 class="card-subtitle mb-2 text-dark">Servicio de reserva</h6>
+                              <p class="card-text">
+                               Si esta cansado de las largas filas, aparte su reserva de canchas de tejo aquí, haga click en ver màs.
+                              </p>
+                              <a href="moduloReserva.html" class="card-link">Ver màs</a>
+
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        
+         <!--ACERCA DE NOSOTROS -->
+        
+        <section class="page-section bg-light" id="equipo">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase" id="equipoSoftbar">Equipo Softbar</h2>
+                    <h3 class="section-subheading text-muted">Somos un equipo proyectado ayudar con nuestro sistema de información a los bares con canchas de tejo, actualmente estamos en proceso de elaboración de ultimas mejoras. Nuestro equipo esta certificado en el sena con el programa ADSI "Analisis y desarrollo en sistemas de informacion" ,Este grupo esta conformado por 4 personas las cuales son.</h3>
+                </div>
+                <br>
+                <br>
+                <div class="row equipo-miembro">
+                    <div class="col-lg-6">
+                        <div class="equipo-miembro" >
+                            <img class="mx-auto rounded-circle" src="img/Andres O.png" alt="..." />
+                            <h4>Andres Ortiz</h4>
+                            <p class="text-muted">Inventario</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="equipo-miembro">
+                            <img class="mx-auto rounded-circle" src="img/Andres M.png" alt="..." />
+                            <h4>Andres Moreno</h4>
+                            <p class="text-muted">domicilios</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="equipo-miembro" id="miembro">
+                            <img class="mx-auto rounded-circle" src="img/Alejandra.png" alt="..." />
+                            <h4>Alejandra Moncada </h4>
+                            <p class="text-muted">Ventas</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="equipo-miembro" id="miembro">
+                            <img class="mx-auto rounded-circle" src="img/adam.png" alt="..." />
+                            <h4>Adam Torres </h4>
+                            <p class="text-muted">Reserva</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+
+        </section>
+   
+        <br>
+        <br>
+        <!-- Contacto-->
+        <section class="page-section" id="contacto">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">contactenos</h2>
+                    <h3 class="section-subheading text-light">Leeremos sus mensajes.</h3>
+                </div>
+                
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Su nombre *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Su nombre es requerido.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Su correo electronico *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">Su correo es requerido.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Correo no es valido.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control text-dark" id="phone" type="tel" placeholder="Su número de telefono *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Su numero de telefono es requerido.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Escriba su mensaje *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Su mensaje es requerido.</div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                   
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar mensaje</button></div>
+                </form>
+            </div>
+        </section>
+        </section>
+
+
+
+        <!-- Footer-->
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

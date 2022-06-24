@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Softbar</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="dashboard.css" rel="stylesheet" />
+        <link rel="stylesheet" href="tabla.css">
+        <script src="DashboardVenta.js"></script>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/xlsx@0.16.9/dist/xlsx.full.min.js"></script>
+        <script src="https://unpkg.com/file-saverjs@latest/FileSaver.min.js"></script>
+        <script src="https://unpkg.com/tableexport@latest/dist/js/tableexport.min.js"></script>
+
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-warning">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand fs-2 ps-3 fw-bold text-dark" href="">SOFTBAR</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-dark btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+              <div class="input-group">
+
+                  <a class="btn btn-primary" href="inicioSesion.html"><button></button>Cerrar sesión </a>
+              </div>
+          </form>
+            <!-- Navbar-->
+            
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="Dashboard.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interfaces</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Registro de usuarios 
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="tablaEmpleados.html">Registro empleados</a>
+                                    <a class="nav-link" href="tablaClientes.html">Registro cliente</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Páginas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Autentificación
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="Index.html">Iniciar sesión</a>
+                                            <a class="nav-link" href="registrarUsuario.html">registrarse</a>
+                                            <a class="nav-link" href="codigoRecuperacion.html">Recuperar contraseña</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="paginaError.html">404 Page</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Modulos</div>
+                            <a class="nav-link" href="moduloVentas.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Ventas
+                            </a>
+                            <a class="nav-link" href="moduloInventario.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Inventario
+                            </a>
+                            <a class="nav-link" href="moduloDomicilio.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Domicilio
+                            </a>
+                            <a class="nav-link" href="moduloReserva.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Reserva
+                            </a>
+                        </div>
+                    <br>
+                    <br>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Sesión iniciada:</div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Ventas</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="DashboardVentas.html">Detalles</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Inventario</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="DashboardInventario.html">Detalles</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Domicilio</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="DashboardDomicilio.html">Detalles</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Reserva</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="DashboardReserva.html">Detalles</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div class="container">
+                            <div class="row">
+                                <i class="col-lg-12"></i>
+                                Ventas registradas 
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ejemploModelo" data-bs-whatever="@mdo">Agregar</button>
+                                       
+                                <div class="modal fade" id="ejemploModelo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header bg-warning">
+                                        <h5 class="modal-title" id="exampleModalLabel">Agregar venta</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form>
+                                          <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                            <input type="text" class="form-control" id="nombre5">
+                                          </div>
+
+                                          <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                            <input type="tel" class="form-control" id="telefono5" maxlength="10" minlength="10">
+                                          </div>
+
+                                          <div class="mb-4">
+                                            <label for="recipient-name" class="col-form-label">Dirección:</label>
+                                            <input type="text" class="form-control" id="direccion5">
+                                          </div>
+
+                                          <div class="mb-2" ><label class="col-form-label" for="Jornada">Venta<label></div> <select name="Hora jornada" id="venta5">
+                                            <option value="1"> Domicilio</option>
+                                            <option value="2">Reserva</option>
+                                          </select>
+                                          
+
+                                          <div class="mb-4">
+                                            <label for="recipient-name" class="col-form-label">Valor:</label>
+                                            <input type="number" class="form-control" id="valorTotal5">
+                                          </div>
+                                        </form>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-success" onclick="agregarventa()">Agregar</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="card-body">
+                              <table id="tabla">
+                                  <thead>
+                                      <tr>
+                                          <th>Id Venta</th>
+                                          <th>Nombre</th>
+                                          <th>Telefono</th>
+                                          <th>Direccion</th>
+                                          <th>Venta</th>
+                                          <th>valor</th>
+                                          <th>Acciones</th>
+                                      </tr>
+                                  </thead>
+                                  <tfoot>
+                                      <tr>
+                                          <th>Id venta</th>
+                                          <th>Nombre</th>
+                                          <th>Telefono</th>
+                                          <th>Direccion</th>
+                                          <th>Venta</th>
+                                          <th>valor</th>
+                                          <th>Acciones</th>
+                                      </tr>
+                                  </tfoot>
+                                  <tbody>
+                                      <tr>
+                                          <td>50012345</td>
+                                          <td>Wilman Perez</td>
+                                          <td>3125492304</td>
+                                          <td>cra 45 este #76-24 E</td>
+                                          <td>Domicilio</td>
+                                          <td>$50.000</td>
+                                          <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Editar</button>
+                                     
+                                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header bg-primary">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Editar venta</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      <form>
+                                                        <div class="mb-3">
+                                                          <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                          <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="nombre">
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                          <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                          <input type="tel"  style="background-color: rgb(185, 185, 185);"class="form-control" id="telefono">
+                                                        </div>
+
+                                                        <div class="mb-4">
+                                                          <label for="recipient-name" class="col-form-label">Dirección:</label>
+                                                          <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="direccion">
+                                                        </div>
+
+                                                        <div class="mb-2" ><label class="col-form-label" for="Jornada">Venta<label></div> <select name="Hora jornada" id="venta" style="background-color: rgb(185, 185, 185);">
+                                                          <option value="1"> Domicilio</option>
+                                                          <option value="2">Reserva</option>
+                                                        </select>
+
+                                                        <div class="mb-4">
+                                                          <label for="recipient-name" class="col-form-label">Valor:</label>
+                                                          <input type="number" style="background-color: rgb(185, 185, 185);" class="form-control" id="valorTotal">
+                                                        </div>
+                                                      </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                      <button type="button" class="btn btn-primary" onclick="registrarVenta()">Editar</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <td><button type="button" class="btn btn-success">Guardar</button></td>
+
+                                              <td>
+                                                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                                      <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                          <div class="modal-header bg-danger">
+                                                            <h5 class="modal-title text-bold" id="exampleModalToggleLabel">¡ATENCIÓN!</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+                                                            ¿Está Seguro que quiere eliminar esta información?
+                                                          </div>
+                                                          <div class="modal-footer">
+                                                            <button class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    
+                                                    </div>
+                                                    <a class="btn btn-danger" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Eliminar</a> 
+                                              </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td>50015647</td>
+                                        <td>Maria Quintero</td>
+                                        <td>3224545731</td>
+                                        <td>KR 16 B #42 SUR 28</td>
+                                        <td>Reserva</td>
+                                        <td>$35.000</td>
+                                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemp" data-bs-whatever="@mdo">Editar</button>
+                                   
+                                            <div class="modal fade" id="ejemp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                              <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                  <div class="modal-header bg-primary">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Editar venta</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <form>
+                                                      <div class="mb-3">
+                                                        <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                        <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="nombre1">
+                                                      </div>
+
+                                                      <div class="mb-3">
+                                                        <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                        <input type="tel"  style="background-color: rgb(185, 185, 185);"class="form-control" id="telefono1">
+                                                      </div>
+
+                                                      <div class="mb-4">
+                                                        <label for="recipient-name" class="col-form-label">Dirección:</label>
+                                                        <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="direccion1">
+                                                      </div>
+
+                                                      <div class="mb-2" ><label class="col-form-label" for="Jornada">Venta<label></div> <select name="Hora jornada" id="venta1" style="background-color: rgb(185, 185, 185);">
+                                                        <option value="1"> Domicilio</option>
+                                                        <option value="2">Reserva</option>
+                                                      </select>
+
+                                                      <div class="mb-4">
+                                                        <label for="recipient-name" class="col-form-label">Valor:</label>
+                                                        <input type="number" style="background-color: rgb(185, 185, 185);" class="form-control" id="valorTotal1">
+                                                      </div>
+                                                    </form>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                    <button type="button" class="btn btn-primary" onclick="registrarVenta1()">Editar</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <td><button type="button" class="btn btn-success">Guardar</button></td>
+
+                                            <td>
+                                                <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header bg-danger">
+                                                          <h5 class="modal-title text-bold" id="exampleModalToggleLabel">¡ATENCIÓN!</h5>
+                                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                          ¿Está Seguro que quiere eliminar esta información?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                          <button class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  </div>
+                                                  <a class="btn btn-danger" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Eliminar</a> 
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                      <td>500157621</td>
+                                      <td>Sergio Salazar</td>
+                                      <td>3214564821</td>
+                                      <td>KR 32 #65-25</td>
+                                      <td>Domicilio</td>
+                                      <td>$25.000</td>
+                                      <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo1" data-bs-whatever="@mdo">Editar</button>
+                                 
+                                          <div class="modal fade" id="ejemplo1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                  <h5 class="modal-title" id="exampleModalLabel">Editar venta</h5>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <form>
+                                                    <div class="mb-3">
+                                                      <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                      <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="nombre2">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                      <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                      <input type="tel"  style="background-color: rgb(185, 185, 185);"class="form-control" id="telefono2">
+                                                    </div>
+
+                                                    <div class="mb-4">
+                                                      <label for="recipient-name" class="col-form-label">Dirección:</label>
+                                                      <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="direccion2">
+                                                    </div>
+
+                                                    <div class="mb-2" ><label class="col-form-label" for="Jornada">Venta<label></div> <select name="Hora jornada" id="venta2" style="background-color: rgb(185, 185, 185);">
+                                                      <option value="1"> Domicilio</option>
+                                                      <option value="2">Reserva</option>
+                                                    </select>
+
+                                                    <div class="mb-4">
+                                                      <label for="recipient-name" class="col-form-label">Valor:</label>
+                                                      <input type="number" style="background-color: rgb(185, 185, 185);" class="form-control" id="valorTotal2">
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                  <button type="button" class="btn btn-primary" onclick="registrarVenta2()">Editar</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <td><button type="button" class="btn btn-success">Guardar</button></td>
+
+                                          <td>
+                                              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                                  <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header bg-danger">
+                                                        <h5 class="modal-title text-bold" id="exampleModalToggleLabel">¡ATENCIÓN!</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                        ¿Está Seguro que quiere eliminar esta información?
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                        <button class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                
+                                                </div>
+                                                <a class="btn btn-danger" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Eliminar</a> 
+                                          </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>50015678</td>
+                                    <td>Santiago Diaz</td>
+                                    <td>3125492304</td>
+                                    <td>KR 80# 77-23</td>
+                                    <td>Reserva</td>
+                                    <td>$46.000</td>
+                                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo2" data-bs-whatever="@mdo">Editar</button>
+                               
+                                        <div class="modal fade" id="ejemplo2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="modal-header bg-primary">
+                                                <h5 class="modal-title" id="exampleModalLabel">Editar venta</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                <form>
+                                                  <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                    <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="nombre3">
+                                                  </div>
+
+                                                  <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                    <input type="tel"  style="background-color: rgb(185, 185, 185);"class="form-control" id="telefono3">
+                                                  </div>
+
+                                                  <div class="mb-4">
+                                                    <label for="recipient-name" class="col-form-label">Dirección:</label>
+                                                    <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="direccion3">
+                                                  </div>
+
+                                                  <div class="mb-2" ><label class="col-form-label" for="Jornada">Venta<label></div> <select name="Hora jornada" id="venta3" style="background-color: rgb(185, 185, 185);">
+                                                    <option value="1"> Domicilio</option>
+                                                    <option value="2">Reserva</option>
+                                                  </select>
+
+                                                  <div class="mb-4">
+                                                    <label for="recipient-name" class="col-form-label">Valor:</label>
+                                                    <input type="number" style="background-color: rgb(185, 185, 185);" class="form-control" id="valorTotal3">
+                                                  </div>
+                                                </form>
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                <button type="button" class="btn btn-primary" onclick="registrarVenta3()">Editar</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <td><button type="button" class="btn btn-success">Guardar</button></td>
+
+                                        <td>
+                                            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header bg-danger">
+                                                      <h5 class="modal-title text-bold" id="exampleModalToggleLabel">¡ATENCIÓN!</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ¿Está Seguro que quiere eliminar esta información?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              
+                                              </div>
+                                              <a class="btn btn-danger" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Eliminar</a> 
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                  <td>50019091</td>
+                                  <td>Angelica Castro</td>
+                                  <td>3223456752</td>
+                                  <td>cll 23 21B #10-25</td>
+                                  <td>Domicilio</td>
+                                  <td>$30.000</td>
+                                  <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo3" data-bs-whatever="@mdo">Editar</button>
+                             
+                                      <div class="modal fade" id="ejemplo3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                          <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                              <h5 class="modal-title" id="exampleModalLabel">Editar venta</h5>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                              <form>
+                                                <div class="mb-3">
+                                                  <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                  <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="nombre4">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                  <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                  <input type="tel"  style="background-color: rgb(185, 185, 185);"class="form-control" id="telefono4">
+                                                </div>
+
+                                                <div class="mb-4">
+                                                  <label for="recipient-name" class="col-form-label">Dirección:</label>
+                                                  <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="direccion4">
+                                                </div>
+
+                                                <div class="mb-2" ><label class="col-form-label" for="Jornada">Venta<label></div> <select name="Hora jornada" id="venta4" style="background-color: rgb(185, 185, 185);">
+                                                  <option value="1"> Domicilio</option>
+                                                  <option value="2">Reserva</option>
+                                                </select>
+
+                                                <div class="mb-4">
+                                                  <label for="recipient-name" class="col-form-label">Valor:</label>
+                                                  <input type="number" style="background-color: rgb(185, 185, 185);" class="form-control" id="valorTotal4">
+                                                </div>
+                                              </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                              <button type="button" class="btn btn-primary" onclick="registrarVenta4()">Editar</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <td><button type="button" class="btn btn-success">Guardar</button></td>
+
+                                      <td>
+                                          <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                              <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                  <div class="modal-header bg-danger">
+                                                    <h5 class="modal-title text-bold" id="exampleModalToggleLabel">¡ATENCIÓN!</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    ¿Está Seguro que quiere eliminar esta información?
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                    <button class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            
+                                            </div>
+                                            <a class="btn btn-danger" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Eliminar</a> 
+                                      </td>
+                              </tr>
+                            </table>
+                            <button type="button" class="btn btn-success" id="btnExportar">Descargar a excel</button>
+            </div>
+
+        </div>
+        
+
+        <script>
+          const $btnExportar = document.querySelector("#btnExportar"),
+              $tabla = document.querySelector("#tabla");
+      
+          $btnExportar.addEventListener("click", function() {
+              let tableExport = new TableExport($tabla, {
+                  exportButtons: false, // No queremos botones
+                  filename: "Reporte de Ventas", //Nombre del archivo de Excel
+                  sheetname: "Reporte de Ventas", //Título de la hoja
+              });
+              let datos = tableExport.getExportData();
+              let preferenciasDocumento = datos.tabla.xlsx;
+              tableExport.export2file(preferenciasDocumento.data, preferenciasDocumento.mimeType, preferenciasDocumento.filename, preferenciasDocumento.fileExtension, preferenciasDocumento.merges, preferenciasDocumento.RTL, preferenciasDocumento.sheetname);
+          });
+      </script>
+
+   
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
+

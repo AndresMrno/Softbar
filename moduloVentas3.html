@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Softbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="vistaCliente.css">
+    <script src="editarPerfil.js"></script>
+    <link rel="stylesheet" href="moduloVentas.css">
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning mb-0" id="Menu">
+            <div class="container-fluid">
+              <a class="navbar-brand fs-2 fw-bold"  href="vistaCliente.html">Softbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#servicios">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#equipo">Acerca de nosotros</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contactenos </a>
+                  </li>
+                  
+                </ul>
+    
+                    <button class="btn btn-primary">Cliente</button>
+                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplom" data-bs-whatever="@mdo">Editar Perfil</button>
+                                           
+                            <div class="modal fade" id="ejemplom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                             <div class="modal-dialog">
+                             <div class="modal-content">
+                             <div class="modal-header bg-primary">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <form>
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                    <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre">
+                                  </div>
+    
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                    <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="apellido">
+                                  </div>
+    
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                    <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="direccion">
+                                  </div>
+    
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                    <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono">
+                                  </div>
+
+                                  <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Correo:</label>
+                                    <input type="email" class="form-control" style="background-color: rgb(185, 185, 185);" id="correo">
+                                  </div>
+    
+                                 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary" onclick="editar()">Editar perfil</button>
+                          </div>
+                        </div>
+                      </div>
+                         </div>
+                        </form>
+              </div>
+              <button class="btn btn-primary"><a href="inicioSesion.html" style="text-decoration:none;" class="text-light fs-6">Cerrar sesión</a></button>
+            </div>
+            
+          </nav>
+
+
+
+
+          <div class="logo">
+            <img src="img/LOGO.png" alt="logo">
+        </div>
+    <!--Contenido-->
+    <h1 class="text-center" style="margin-bottom: 3%;">Ventas</h1>
+
+
+        <div class="container-fluid">
+
+          <div class="col" id="botones">
+
+                <button class="col-2 mb-4 bg-primary" style="padding: 8px;"><a href="moduloVentas1.html" style="text-decoration: none; color:black; font-size: 20px;">Tequilas</a></button>
+
+                <button class="col-2 mb-4 bg-primary" style="padding: 8px;"><a href="moduloVentas.html" style="text-decoration: none; color:black; font-size: 20px;">Cervezas</a></button>
+
+                <button class="col-2 mb-4 bg-primary" style="padding: 8px;"><a href="moduloVentas3.html" style="text-decoration: none; color:black; font-size: 20px;">Aguardiente</a></button>
+
+                <button class="col-2 mb-4 bg-primary" style="padding: 8px;"><a href="moduloVentas4.html" style="text-decoration: none; color:black; font-size: 20px;">Ron</a></button>
+                
+          </div>
+
+        </div>
+    
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <div class="card" style="width: 15rem;" id="carta">
+                        <img src="img/Productos/VIno.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Aguardiente antioqueño</h5>
+                          <p class="card-text">Aguardiente 200 ml
+                            <br>
+                            <br>
+                            <h4>Precio</h4>
+                            <h4>$20.000</h4>
+                          </p>
+                        </div>
+ 
+                        <div class="card-body">
+                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                  
+                                   <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header bg-primary">
+                                   <h5 class="modal-title" id="exampleModalLabel">Comprar producto</h5>
+                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                   </div>
+                                   <div class="modal-body">
+                                   <form>
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                           <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre1">
+                                         </div>
+           
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                           <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="apellido1">
+                                         </div>
+           
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                           <input type="text" class="form-control"style="background-color: rgb(185, 185, 185);" id="direccion1">
+                                         </div>
+           
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                           <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono1">
+                                         </div>
+
+                                         <div class="mb-3">
+                                          <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                          <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad" step="5">
+                                        </div>
+
+       
+                                         <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                
+                                            <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                            
+                                              <select class="form-select" aria-label="Default select example" id="metodo1" style="background-color: rgb(185, 185, 185);">
+                                                <option selected>Elija metodo de pago</option>
+                                                <option value="1">Pago contra entrega</option>
+                                                <option value="2">Pagar en linea</option>
+                                              </select>
+                                            </div>
+           
+                                        
+                                 </div>
+                                 <div class="modal-footer">
+                                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                   <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                 </div>
+                               </div>
+                             </div>
+                                </div>
+                               </form>
+                     </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+
+                        <div class="card" style="width: 15rem;" id="carta">
+                            <img src="img/Productos/VIno.png" class="card-img-top " style="width:250px ;" alt="..." >
+                            <div class="card-body">
+                              <h5 class="card-title">Aguardiente nectar</h5>
+                              <p class="card-text">Aguardiente 250 ml
+                                <br>
+                                <br>
+                                <h4>Precio</h4>
+                                <h4>$25.500</h4>
+                              </p>
+                            </div>
+
+
+
+     
+                            <div class="card-body">
+                                
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                      
+                                       <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                       <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                       </div>
+                                       <div class="modal-body">
+                                       <form>
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                               <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre">
+                                             </div>
+               
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                               <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="apellido">
+                                             </div>
+               
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                               <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="direccion">
+                                             </div>
+               
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                               <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono">
+                                             </div>
+
+                                             <div class="mb-3">
+                                              <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                              <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad">
+                                            </div>
+
+
+                                             <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                
+                                                <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                                
+                                                  <select class="form-select" aria-label="Default select example" id="metodo" style="background-color: rgb(185, 185, 185);">
+                                                    <option selected>Elija metodo de pago</option>
+                                                    <option value="1">Pago contra entrega</option>
+                                                    <option value="2">Pagar en linea</option>
+                                                  </select>
+                                                </div>
+                                            
+                                     </div>
+                                     <div class="modal-footer">
+                                       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                       <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                     </div>
+                                   </div>
+                                 </div>
+                                    </div>
+                                   </form>
+                         </div>
+                            </div>
+                          </div>
+
+                          <div class="col">
+
+                            <div class="card" style="width: 15rem;" id="carta">
+                                <img src="img/Productos/VIno.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Aguardiente blanco del valle</h5>
+                                  <p class="card-text">Cerveza heineken 1 litro
+                                    <br>
+                                    <br>
+                                    <h4>Precio</h4>
+                                    <h4>$60.000</h4>
+                                  </p>
+                                </div>
+         
+                                <div class="card-body">
+                                    
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                          
+                                           <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                            <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                           <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                           </div>
+                                           <div class="modal-body">
+                                           <form>
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                   <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre">
+                                                 </div>
+                   
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                                   <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="apellido">
+                                                 </div>
+                   
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                                   <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="direccion">
+                                                 </div>
+                   
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                   <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono">
+                                                 </div>
+
+                                                 <div class="mb-3">
+                                                  <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                                  <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad" step="5">
+                                                </div>
+
+
+                                              
+                                                 <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                
+                                                    <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                                    
+                                                      <select class="form-select" aria-label="Default select example" id="metodo" style="background-color: rgb(185, 185, 185);">
+                                                        <option selected>Elija metodo de pago</option>
+                                                        <option value="1">Pago contra entrega</option>
+                                                        <option value="2">Pagar en linea</option>
+                                                      </select>
+                                                    </div>
+                                         </div>
+                                         <div class="modal-footer">
+                                           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                           <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                         </div>
+                                       </div>
+                                     </div>
+                                        </div>
+                                       </form>
+                             </div>
+                                </div>
+                              </div>
+
+                              <div class="col">
+
+                                <div class="card" style="width: 15rem;" id="carta">
+                                    <img src="img/Productos/VIno.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Aguardiente tapa roja</h5>
+                                      <p class="card-text">Cerveza aguila 500 ml
+                                        <br>
+                                        <br>
+                                        <h4>Precio</h4>
+                                        <h4>$30.000</h4>
+                                      </p>
+                                    </div>
+             
+                                    <div class="card-body">
+                                        
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                              
+                                               <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                               <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                               </div>
+                                               <div class="modal-body">
+                                               <form>
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                       <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="nombre">
+                                                     </div>
+                       
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                                       <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);"id="apellido">
+                                                     </div>
+                       
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                                       <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);"id="direccion">
+                                                     </div>
+                       
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                       <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);"id="telefono">
+                                                     </div>
+
+                                                     <div class="mb-3">
+                                                      <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                                      <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad" step="5">
+                                                    </div>
+
+                                                     <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                
+                                                        <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                                        
+                                                          <select class="form-select" aria-label="Default select example" id="metodo" style="background-color: rgb(185, 185, 185);">
+                                                            <option selected>Elija metodo de pago</option>
+                                                            <option value="1">Pago contra entrega</option>
+                                                            <option value="2">Pagar en linea</option>
+                                                          </select>
+                                                        </div>
+                   
+
+                       
+                                                    
+                                             </div>
+                                             <div class="modal-footer">
+                                               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                               <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                             </div>
+                                           </div>
+                                         </div>
+                                            </div>
+                                           </form>
+                                 </div>
+
+                                    </div>
+                                  </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+
+                    <div class="card" style="width: 15rem;" id="carta">
+                        <img src="img/Productos/VIno.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Aguardiente antioqueño</h5>
+                          <p class="card-text">Aguardiente 200 ml
+                            <br>
+                            <br>
+                            <h4>Precio</h4>
+                            <h4>$20.000</h4>
+                          </p>
+                        </div>
+ 
+                        <div class="card-body">
+                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                  
+                                   <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header bg-primary">
+                                   <h5 class="modal-title" id="exampleModalLabel">Comprar producto</h5>
+                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                   </div>
+                                   <div class="modal-body">
+                                   <form>
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                           <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre1">
+                                         </div>
+           
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                           <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="apellido1">
+                                         </div>
+           
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                           <input type="text" class="form-control"style="background-color: rgb(185, 185, 185);" id="direccion1">
+                                         </div>
+           
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                           <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono1">
+                                         </div>
+
+                                         <div class="mb-3">
+                                          <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                          <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad" step="5">
+                                        </div>
+
+       
+                                         <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                
+                                            <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                            
+                                              <select class="form-select" aria-label="Default select example" id="metodo1" style="background-color: rgb(185, 185, 185);">
+                                                <option selected>Elija metodo de pago</option>
+                                                <option value="1">Pago contra entrega</option>
+                                                <option value="2">Pagar en linea</option>
+                                              </select>
+                                            </div>
+           
+                                        
+                                 </div>
+                                 <div class="modal-footer">
+                                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                   <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                 </div>
+                               </div>
+                             </div>
+                                </div>
+                               </form>
+                     </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+
+                        <div class="card" style="width: 15rem;" id="carta">
+                            <img src="img/Productos/VIno.png" class="card-img-top " style="width:250px ;" alt="..." >
+                            <div class="card-body">
+                              <h5 class="card-title">Aguardiente nectar</h5>
+                              <p class="card-text">Aguardiente 250 ml
+                                <br>
+                                <br>
+                                <h4>Precio</h4>
+                                <h4>$25.500</h4>
+                              </p>
+                            </div>
+
+
+
+     
+                            <div class="card-body">
+                                
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                      
+                                       <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                       <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                       </div>
+                                       <div class="modal-body">
+                                       <form>
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                               <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre">
+                                             </div>
+               
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                               <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="apellido">
+                                             </div>
+               
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                               <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="direccion">
+                                             </div>
+               
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                               <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono">
+                                             </div>
+
+                                             <div class="mb-3">
+                                              <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                              <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad">
+                                            </div>
+
+
+                                             <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                
+                                                <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                                
+                                                  <select class="form-select" aria-label="Default select example" id="metodo" style="background-color: rgb(185, 185, 185);">
+                                                    <option selected>Elija metodo de pago</option>
+                                                    <option value="1">Pago contra entrega</option>
+                                                    <option value="2">Pagar en linea</option>
+                                                  </select>
+                                                </div>
+                                            
+                                     </div>
+                                     <div class="modal-footer">
+                                       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                       <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                     </div>
+                                   </div>
+                                 </div>
+                                    </div>
+                                   </form>
+                         </div>
+                            </div>
+                          </div>
+
+                          <div class="col">
+
+                            <div class="card" style="width: 15rem;" id="carta">
+                                <img src="img/Productos/VIno.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Aguardiente blanco del valle</h5>
+                                  <p class="card-text">Cerveza heineken 1 litro
+                                    <br>
+                                    <br>
+                                    <h4>Precio</h4>
+                                    <h4>$60.000</h4>
+                                  </p>
+                                </div>
+         
+                                <div class="card-body">
+                                    
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                          
+                                           <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                            <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                           <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                           </div>
+                                           <div class="modal-body">
+                                           <form>
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                   <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre">
+                                                 </div>
+                   
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                                   <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="apellido">
+                                                 </div>
+                   
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                                   <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="direccion">
+                                                 </div>
+                   
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                   <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono">
+                                                 </div>
+
+                                                 <div class="mb-3">
+                                                  <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                                  <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad" step="5">
+                                                </div>
+
+
+                                              
+                                                 <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                
+                                                    <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                                    
+                                                      <select class="form-select" aria-label="Default select example" id="metodo" style="background-color: rgb(185, 185, 185);">
+                                                        <option selected>Elija metodo de pago</option>
+                                                        <option value="1">Pago contra entrega</option>
+                                                        <option value="2">Pagar en linea</option>
+                                                      </select>
+                                                    </div>
+                                         </div>
+                                         <div class="modal-footer">
+                                           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                           <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                         </div>
+                                       </div>
+                                     </div>
+                                        </div>
+                                       </form>
+                             </div>
+                                </div>
+                              </div>
+
+                              <div class="col">
+
+                                <div class="card" style="width: 15rem;" id="carta">
+                                    <img src="img/Productos/VIno.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Aguardiente tapa roja</h5>
+                                      <p class="card-text">Cerveza aguila 500 ml
+                                        <br>
+                                        <br>
+                                        <h4>Precio</h4>
+                                        <h4>$30.000</h4>
+                                      </p>
+                                    </div>
+             
+                                    <div class="card-body">
+                                        
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                              
+                                               <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                               <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                               </div>
+                                               <div class="modal-body">
+                                               <form>
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                       <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="nombre">
+                                                     </div>
+                       
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                                       <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);"id="apellido">
+                                                     </div>
+                       
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                                       <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);"id="direccion">
+                                                     </div>
+                       
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                       <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);"id="telefono">
+                                                     </div>
+
+                                                     <div class="mb-3">
+                                                      <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                                      <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad" step="5">
+                                                    </div>
+
+                                                     <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                
+                                                        <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                                        
+                                                          <select class="form-select" aria-label="Default select example" id="metodo" style="background-color: rgb(185, 185, 185);">
+                                                            <option selected>Elija metodo de pago</option>
+                                                            <option value="1">Pago contra entrega</option>
+                                                            <option value="2">Pagar en linea</option>
+                                                          </select>
+                                                        </div>
+                   
+
+                       
+                                                    
+                                             </div>
+                                             <div class="modal-footer">
+                                               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                               <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                             </div>
+                                           </div>
+                                         </div>
+                                            </div>
+                                           </form>
+                                 </div>
+
+                                    </div>
+                                  </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+
+                    <div class="card" style="width: 15rem;" id="carta">
+                        <img src="img/Productos/VIno.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Aguardiente antioqueño</h5>
+                          <p class="card-text">Aguardiente 200 ml
+                            <br>
+                            <br>
+                            <h4>Precio</h4>
+                            <h4>$20.000</h4>
+                          </p>
+                        </div>
+ 
+                        <div class="card-body">
+                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                  
+                                   <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header bg-primary">
+                                   <h5 class="modal-title" id="exampleModalLabel">Comprar producto</h5>
+                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                   </div>
+                                   <div class="modal-body">
+                                   <form>
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                           <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre1">
+                                         </div>
+           
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                           <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="apellido1">
+                                         </div>
+           
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                           <input type="text" class="form-control"style="background-color: rgb(185, 185, 185);" id="direccion1">
+                                         </div>
+           
+                                         <div class="mb-3">
+                                           <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                           <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono1">
+                                         </div>
+
+                                         <div class="mb-3">
+                                          <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                          <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad" step="5">
+                                        </div>
+
+       
+                                         <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                
+                                            <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                            
+                                              <select class="form-select" aria-label="Default select example" id="metodo1" style="background-color: rgb(185, 185, 185);">
+                                                <option selected>Elija metodo de pago</option>
+                                                <option value="1">Pago contra entrega</option>
+                                                <option value="2">Pagar en linea</option>
+                                              </select>
+                                            </div>
+           
+                                        
+                                 </div>
+                                 <div class="modal-footer">
+                                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                   <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                 </div>
+                               </div>
+                             </div>
+                                </div>
+                               </form>
+                     </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+
+                        <div class="card" style="width: 15rem;" id="carta">
+                            <img src="img/Productos/VIno.png" class="card-img-top " style="width:250px ;" alt="..." >
+                            <div class="card-body">
+                              <h5 class="card-title">Aguardiente nectar</h5>
+                              <p class="card-text">Aguardiente 250 ml
+                                <br>
+                                <br>
+                                <h4>Precio</h4>
+                                <h4>$25.500</h4>
+                              </p>
+                            </div>
+
+
+
+     
+                            <div class="card-body">
+                                
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                      
+                                       <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                       <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                       </div>
+                                       <div class="modal-body">
+                                       <form>
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                               <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre">
+                                             </div>
+               
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                               <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="apellido">
+                                             </div>
+               
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                               <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="direccion">
+                                             </div>
+               
+                                             <div class="mb-3">
+                                               <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                               <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono">
+                                             </div>
+
+                                             <div class="mb-3">
+                                              <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                              <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad">
+                                            </div>
+
+
+                                             <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                
+                                                <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                                
+                                                  <select class="form-select" aria-label="Default select example" id="metodo" style="background-color: rgb(185, 185, 185);">
+                                                    <option selected>Elija metodo de pago</option>
+                                                    <option value="1">Pago contra entrega</option>
+                                                    <option value="2">Pagar en linea</option>
+                                                  </select>
+                                                </div>
+                                            
+                                     </div>
+                                     <div class="modal-footer">
+                                       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                       <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                     </div>
+                                   </div>
+                                 </div>
+                                    </div>
+                                   </form>
+                         </div>
+                            </div>
+                          </div>
+
+                          <div class="col">
+
+                            <div class="card" style="width: 15rem;" id="carta">
+                                <img src="img/Productos/VIno.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Aguardiente blanco del valle</h5>
+                                  <p class="card-text">Cerveza heineken 1 litro
+                                    <br>
+                                    <br>
+                                    <h4>Precio</h4>
+                                    <h4>$60.000</h4>
+                                  </p>
+                                </div>
+         
+                                <div class="card-body">
+                                    
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                          
+                                           <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                            <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                           <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                           </div>
+                                           <div class="modal-body">
+                                           <form>
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                   <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="nombre">
+                                                 </div>
+                   
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                                   <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="apellido">
+                                                 </div>
+                   
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                                   <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);" id="direccion">
+                                                 </div>
+                   
+                                                 <div class="mb-3">
+                                                   <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                   <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);" id="telefono">
+                                                 </div>
+
+                                                 <div class="mb-3">
+                                                  <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                                  <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad" step="5">
+                                                </div>
+
+
+                                              
+                                                 <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                
+                                                    <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                                    
+                                                      <select class="form-select" aria-label="Default select example" id="metodo" style="background-color: rgb(185, 185, 185);">
+                                                        <option selected>Elija metodo de pago</option>
+                                                        <option value="1">Pago contra entrega</option>
+                                                        <option value="2">Pagar en linea</option>
+                                                      </select>
+                                                    </div>
+                                         </div>
+                                         <div class="modal-footer">
+                                           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                           <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                         </div>
+                                       </div>
+                                     </div>
+                                        </div>
+                                       </form>
+                             </div>
+                                </div>
+                              </div>
+
+                              <div class="col">
+
+                                <div class="card" style="width: 15rem;" id="carta">
+                                    <img src="img/Productos/VIno.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Aguardiente tapa roja</h5>
+                                      <p class="card-text">Cerveza aguila 500 ml
+                                        <br>
+                                        <br>
+                                        <h4>Precio</h4>
+                                        <h4>$30.000</h4>
+                                      </p>
+                                    </div>
+             
+                                    <div class="card-body">
+                                        
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ejemplo" data-bs-whatever="@mdo">Comprar</button>
+                                                              
+                                               <div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                               <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                               </div>
+                                               <div class="modal-body">
+                                               <form>
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                                       <input type="text" style="background-color: rgb(185, 185, 185);" class="form-control" id="nombre">
+                                                     </div>
+                       
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Apellido:</label>
+                                                       <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);"id="apellido">
+                                                     </div>
+                       
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Direccion:</label>
+                                                       <input type="text" class="form-control" style="background-color: rgb(185, 185, 185);"id="direccion">
+                                                     </div>
+                       
+                                                     <div class="mb-3">
+                                                       <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                                       <input type="tel" class="form-control" style="background-color: rgb(185, 185, 185);"id="telefono">
+                                                     </div>
+
+                                                     <div class="mb-3">
+                                                      <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                                      <input type="number" class="form-control" style="background-color: rgb(185, 185, 185);" id="cantidad" step="5">
+                                                    </div>
+
+                                                     <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                
+                                                        <h6 class="mb-0 me-4">Metodo de pago: </h6>
+                                        
+                                                          <select class="form-select" aria-label="Default select example" id="metodo" style="background-color: rgb(185, 185, 185);">
+                                                            <option selected>Elija metodo de pago</option>
+                                                            <option value="1">Pago contra entrega</option>
+                                                            <option value="2">Pagar en linea</option>
+                                                          </select>
+                                                        </div>
+                   
+
+                       
+                                                    
+                                             </div>
+                                             <div class="modal-footer">
+                                               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                               <button type="submit" class="btn btn-primary" onclick="compra()">Pedir producto</button>
+                                             </div>
+                                           </div>
+                                         </div>
+                                            </div>
+                                           </form>
+                                 </div>
+
+                                    </div>
+                                  </div>
+            </div>
+
+
+
+            </div>
+
+
+        </div>
+
+        
+
+
+        <!-- Footer-->
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
